@@ -1,9 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
 
-function index() {
-  return (
-    <div>index</div>
-  )
-}
+const root=ReactDOM.createRoot(document.getElementById
+    ('root')
+)
 
-export default index
+root.render(<App/>)
