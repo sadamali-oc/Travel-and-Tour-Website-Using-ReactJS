@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./navbar.scss";
 import { MdTravelExplore } from "react-icons/md";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -6,19 +6,37 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
 
 function Navbar() {
+
+  const [active , setActive] =useState('navbar')
+  //function to toglle nababr
+
+  const showNav =()=>{
+    setActive ('navBar activeNavbar')
+
+  }
+
+
+
   return (
     <section className="navBarSection">
       <header className="header flex ">
         <div className="logoDiv">
           <a href="#" className="logo">
             <h1>
-              <MdTravelExplore />
+              <MdTravelExplore  className="icon"/>
               Travel.
             </h1>
           </a>
         </div>
 
-        <div className="navBar">
+
+  
+
+
+
+
+
+        <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
               <a href="#" className="navLink">Home</a>
